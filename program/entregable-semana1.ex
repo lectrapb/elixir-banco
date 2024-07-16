@@ -9,7 +9,7 @@ defmodule InventoryManager do
     end
 
     def list_products(%InventoryManager{products: products}) do
-      IO.puts("***********      Products   ********************")
+      IO.puts("***********      Products1   ********************")
       IO.puts("id_product | product_name | product_price  | product_quantity")
       Enum.each(products, fn product ->
         formatted_price = Float.to_string(product.price, decimals: 2)

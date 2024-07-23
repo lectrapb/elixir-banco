@@ -1,7 +1,6 @@
 defmodule LibraryManager do
   defstruct books: [], users_library: []
 
-  # Gestión de Libros
   def add_book(%LibraryManager{books: books} = library_manager, name, stock) do
     id = Enum.count(books) + 1
     book = %{isbn: id, name: name, stock: stock}

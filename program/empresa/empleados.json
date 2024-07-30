@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Juan",
+    "position": "dev",
+    "email": "JhonDoe@mail.com",
+    "phone": "323232",
+    "hire_date": null,
+    "salary": null
+  },
+  {
+    "id": 2,
+    "name": "Ana",
+    "position": "QA",
+    "email": "qa@mail.com",
+    "phone": null,
+    "hire_date": null,
+    "salary": null
+  }
+]

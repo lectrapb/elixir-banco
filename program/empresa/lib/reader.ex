@@ -13,15 +13,15 @@ defmodule Reader do
   def read_empleados_func(nombreArchivo \\ "empleados.json") do
     case File.read(nombreArchivo) do
       {:ok, contents} ->
-        empleados =
-          contents
-          |> Jason.decode!(keys: :atoms)
-          |> Enum.map(fn empleado_map -> struct(Emp, empleado_map) end)
+        # Usar reduce para alacanza un solo flujo
+        # Rise exception y supervisor
+        empleados = contents|> Jason.decode!(keys: :atoms)|> Enum.map(fn empleado_map -> struct(Emp, empleado_map) end)
         {:ok, empleados}
       {:error, :enoent} -> {:ok, []}
-      {:error, reason} -> {:error, reason}
+      {:error, reason}  -> {:error, reason}
     end
   end
+
 
   def search_empleados_by_name(name, nombreArchivo  \\ "empleados.json" ) do
     case read_empleados_func(nombreArchivo) do

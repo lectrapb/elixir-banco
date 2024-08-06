@@ -44,6 +44,8 @@ defmodule InventoryManager do
       end)
     end
 
+
+
     def add_to_shopping_car(%InventoryManager{products: products, shopping_car: shopping_car} = inventory_manager, product_id, quantity) do
       case Enum.find(products, fn product -> product.id == product_id end) do
         nil ->
